@@ -1,0 +1,7 @@
+<% if flash %>
+	<% [:error, :warning, :info, :notice].each do |type| %>
+		<% if flash[type] %>
+			<%= content_tag(:p, h(flash[type]), :id => "flash-message", :class => type.to_s) %>
+		<% end %>
+	<% end %>
+<% end %>

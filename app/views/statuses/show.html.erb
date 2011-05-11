@@ -1,0 +1,15 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<div id="statuses">
+	<h2><%= date_format @user_status.for_date %></h2>
+	<div class="rating smileys-smiley_<%= @user_status.rating.downcase %>" title="<%= @user_status.display_status %>">
+		&nbsp;
+	</div>
+	<br/>
+	<div class="actions">
+	</div>
+</div>
+<%= link_to 'Delete', user_status_path(current_user, @user_status), :method => :delete%>
+<%= link_to 'Back', user_statuses_path %>

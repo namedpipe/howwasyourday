@@ -1,0 +1,11 @@
+<div id="statuses">
+	<% @date_range.each do |date_rating| %>
+		<% if date_rating.last == "blank" %>
+			<a href="<%= new_user_status_path(current_user) %>?date=<%= date_rating.first %>">
+		<div class="rating smileys-smiley_<%= date_rating.last.downcase %>" title="">&nbsp;</div></a>
+		<% else %>
+			<a href="<%= user_status_path(current_user, date_rating.last) %>">
+<div class="rating smileys-smiley_<%= date_rating.last.rating.downcase %>" title="<%= date_rating.last.display_status %>">&nbsp;</div></a>
+		<% end %>
+	<% end %>
+</div>

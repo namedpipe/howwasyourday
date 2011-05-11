@@ -1,0 +1,17 @@
+<% calendar_for(@user_statuses, :html => {:class => "calendar"}) do |status| %>
+	<%= status.head('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun') %>
+	<% status.day do |day, statuses| %>
+		<%= day.day %>
+		<% if statuses.empty?  && day > Time.now.to_date %>
+		&nbsp;
+		<% elsif statuses.empty?  && day < Time.now.to_date %>
+			<div class="calendar-rating smileys-smiley_blank">&nbsp;</div>
+		<% else %>
+			<% statuses.each do |stat| %>
+				<div class="calendar-rating smileys-smiley_<%= stat.rating.downcase %>">&nbsp;</div>
+			<% end %>
+		<% end %>
+	<% end %>
+<% end %>
+
+<%= link_to 'New Status', new_user_status_path %>

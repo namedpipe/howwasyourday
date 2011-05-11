@@ -1,0 +1,121 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+body.bp {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction;
+	@include blueprint-scaffolding;
+	@include blueprint-scaffolding-defaults;
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+	a {
+		color: $link_color;
+	}
+	a:hover {
+		color: $green_link_hover_color;
+	}
+}
+
+form.bp {
+  @include blueprint-form;
+  // You'll probably want to remove the scaffolding once you start styling your site.
+  @include blueprint-scaffolding; }
+
+#container {
+	@include container;
+	padding: 5px;}
+
+#header {
+	@include container;
+	border-bottom: solid 1px $orange_hover_color;
+	p {
+		margin-bottom: 0; }
+	h1 {
+		margin-bottom: 0;
+		margin-top: 10px;
+		a {
+			text-decoration: none; } }
+	#masthead { 
+		@include column(18); }
+	#login-section {
+		@include column(4, true); } }
+
+#content {
+	@include container;
+	padding-top: 20px;
+}
+
+#footer {
+	@include container;
+	margin-top: 100px;
+	padding-top: 4px;
+	border-top: dotted 1px $green_link_hover_color;
+	border-bottom: dotted 1px $green_link_hover_color;
+	height: 20px;
+	font-size: 10px;
+	#navigation {
+		@include push(22);
+	}
+}
+#statuses {
+	@include container;
+	@include column(20,true);
+	@include append(4);
+	a {
+		text-decoration: none;
+	}
+}
+.rating,
+.calendar-rating {
+	height: 60px;
+	width: 60px;
+}
+.rating {
+	float: left;
+}
+.calendar {
+	td { width: 100px;
+			height: 80px;
+			text-align: left;
+			vertical-align: top;
+			border: solid 1px #454545;
+			.today {
+				background-color: #234780;
+			}
+			.future {
+				background-color: #454545;
+			}}
+}
+
+@import "smileys/*.png";
+@include all-smileys-sprites;
+
+#rating-picklist {
+	@include container;
+	@include column(24,true);
+	height: 80px;
+	list-style: none;
+	li {
+		a {
+			display: block;
+			padding-top: 55px;
+			text-align: center;
+			text-decoration: none;
+		}
+	}
+	@include last;
+}

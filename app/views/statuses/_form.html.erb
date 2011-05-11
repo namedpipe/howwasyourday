@@ -1,0 +1,38 @@
+<%= form_for(@user_status, :url => user_statuses_path) do |f| %>
+  <% if @user_status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_status.errors.count, "error") %> prohibited this status from being saved:</h2>
+
+      <ul>
+      <% @user_status.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<% if params[:date].nil? %>
+  <div class="field">
+    <%= f.label :for_date %><br />
+    <%= f.date_select :for_date %>
+  </div>
+	<% else %>
+	<h2><%= date_format @user_status.for_date %></h2>
+	<%= f.hidden_field :for_date %>
+	<% end %>
+  <div class="field">
+		<%= f.hidden_field :rating %>
+		<ul id="rating-picklist">
+		<li id="good" class="rating smileys-smiley_good_unselected"><%= link_to_function "Good", "hyd.set_status('good', #{current_user.id}, '#{@user_status.for_date}')" %></li>
+		<li id="mixed" class="rating smileys-smiley_mixed_unselected"><%= link_to_function "Mixed", "hyd.set_status('mixed', #{current_user.id}, '#{@user_status.for_date}')" %></li>
+		<li id="bad" class="rating smileys-smiley_bad_unselected"><%= link_to_function "Bad", "hyd.set_status('bad', #{current_user.id}, '#{@user_status.for_date}')" %></li>
+		</ul>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_field :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

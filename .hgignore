@@ -1,0 +1,7 @@
+syntax: glob
+*.log
+tmp/restart.txt
+*.sassc
+public/stylesheets/compiled/*
+tmp/sass-cache/*
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>How Was Your Day? | <%= @page_title %></title>
+	<%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag :defaults %>
+	<%= csrf_meta_tag %>
+</head>
+<body class="bp">
+	<div id="container" class="container">
+		<div id="header">
+			<div id="masthead">
+				<h1><%= link_to "How was your day?", "/" %></h1>
+				<p>Keep track of your daily state of mind.</p>
+			</div>
+			<div id="login-section">
+				<% if signed_in? %>
+					<%= render :partial => "layouts/user_info" %>
+				<% else %>
+					<%= link_to_function "login", "hyd.display_login_form()" %>
+					or
+					<%= link_to "sign up", new_user_path %>
+					<%= render :partial => "layouts/login_form" %>
+				<% end %>
+			</div>
+		</div>
+		<div id="content">
+			<div id="flash">
+			</div>
+			<%= yield %>
+		</div>
+		<div id="footer">
+			Copyright 2011. All rights reserved.
+			<span id="navigation"><%= link_to "About", "/home/about" %></span>
+		</div>
+	</div>
+</body>
+</html>
