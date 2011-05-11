@@ -20,6 +20,8 @@ body.bp {
   @include blueprint-interaction;
 	@include blueprint-scaffolding;
 	@include blueprint-scaffolding-defaults;
+	background-color: $orange_hover_color;
+	padding-top: 10px;
   // Remove the scaffolding when you're ready to start doing visual design.
   // Or leave it in if you're happy with how blueprint looks out-of-the-box
 	a {
@@ -37,7 +39,12 @@ form.bp {
 
 #container {
 	@include container;
-	padding: 5px;}
+	padding: 5px;
+	background-color: white;
+	-moz-box-shadow: 3px 3px 4px #000;
+	-webkit-box-shadow: 3px 3px 4px #000;
+	box-shadow: 3px 3px 4px #000;
+	}
 
 #header {
 	@include container;
@@ -57,6 +64,7 @@ form.bp {
 #content {
 	@include container;
 	padding-top: 20px;
+	#announcements-close { text-decoration: none; float: right; font-weight: bold; border: 2px solid #000; color: #000; line-height: 12px; padding: 0 2px 0 2px; margin-right: 5px; margin-top: 5px;}
 }
 
 #footer {

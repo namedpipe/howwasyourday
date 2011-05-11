@@ -11,4 +11,20 @@ class User < ActiveRecord::Base
 		statuses.count
 	end
 
+	def longest_good_streak
+		statuses.count
+	end
+	
+	def good_rating_link_for(date=Time.now.to_date)
+		""
+	end
+
+	def mixed_rating_link_for(date=Time.now.to_date)
+		""
+	end
+
+	def bad_rating_link_for(date=Time.now.to_date)
+		""
+	end
+
 end

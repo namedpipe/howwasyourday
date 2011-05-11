@@ -12,6 +12,9 @@ var hyd = {
 		$(status).className = 'rating smileys-smiley_' + status;
 		var updated_status = status.charAt(0).toUpperCase() + status.slice(1);
 		$('status_rating').value = updated_status;
+	},
+	close_announcements: function() {
+		Effect.toggle('flash', 'slide', { duration: 0.25 });
 	}
 
 }

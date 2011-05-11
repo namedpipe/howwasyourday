@@ -1,4 +1,6 @@
-Howwasyourday::Application.routes.draw do
+HowWasYourDay::Application.routes.draw do
+  get "rating/rate"
+
 	resources :users do
 		resources :statuses do
 			get 'calendar', :on => :collection

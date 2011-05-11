@@ -63,6 +63,8 @@ body.bp {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #333333;
   font-size: 75%;
+  background-color: #f49139;
+  padding-top: 10px;
 }
 /* line 51, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
@@ -478,11 +480,11 @@ body.bp form.inline {
 body.bp form.inline p {
   margin-bottom: 0;
 }
-/* line 25, ../../app/stylesheets/screen.scss */
+/* line 27, ../../app/stylesheets/screen.scss */
 body.bp a {
   color: #401fa7;
 }
-/* line 28, ../../app/stylesheets/screen.scss */
+/* line 30, ../../app/stylesheets/screen.scss */
 body.bp a:hover {
   color: #52f65c;
 }
@@ -602,16 +604,20 @@ form.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 38, ../../app/stylesheets/screen.scss */
+/* line 40, ../../app/stylesheets/screen.scss */
 #container {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
   padding: 5px;
+  background-color: white;
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
 }
 
-/* line 42, ../../app/stylesheets/screen.scss */
+/* line 49, ../../app/stylesheets/screen.scss */
 #header {
   width: 950px;
   margin: 0 auto;
@@ -619,20 +625,20 @@ form.bp form.inline p {
   *zoom: 1;
   border-bottom: solid 1px #f49139;
 }
-/* line 45, ../../app/stylesheets/screen.scss */
+/* line 52, ../../app/stylesheets/screen.scss */
 #header p {
   margin-bottom: 0;
 }
-/* line 47, ../../app/stylesheets/screen.scss */
+/* line 54, ../../app/stylesheets/screen.scss */
 #header h1 {
   margin-bottom: 0;
   margin-top: 10px;
 }
-/* line 50, ../../app/stylesheets/screen.scss */
+/* line 57, ../../app/stylesheets/screen.scss */
 #header h1 a {
   text-decoration: none;
 }
-/* line 52, ../../app/stylesheets/screen.scss */
+/* line 59, ../../app/stylesheets/screen.scss */
 #header #masthead {
   display: inline;
   float: left;
@@ -643,7 +649,7 @@ form.bp form.inline p {
 * html #header #masthead {
   overflow-x: hidden;
 }
-/* line 54, ../../app/stylesheets/screen.scss */
+/* line 61, ../../app/stylesheets/screen.scss */
 #header #login-section {
   display: inline;
   float: left;
@@ -655,7 +661,7 @@ form.bp form.inline p {
   overflow-x: hidden;
 }
 
-/* line 57, ../../app/stylesheets/screen.scss */
+/* line 64, ../../app/stylesheets/screen.scss */
 #content {
   width: 950px;
   margin: 0 auto;
@@ -663,8 +669,20 @@ form.bp form.inline p {
   *zoom: 1;
   padding-top: 20px;
 }
+/* line 67, ../../app/stylesheets/screen.scss */
+#content #announcements-close {
+  text-decoration: none;
+  float: right;
+  font-weight: bold;
+  border: 2px solid #000;
+  color: #000;
+  line-height: 12px;
+  padding: 0 2px 0 2px;
+  margin-right: 5px;
+  margin-top: 5px;
+}
 
-/* line 62, ../../app/stylesheets/screen.scss */
+/* line 70, ../../app/stylesheets/screen.scss */
 #footer {
   width: 950px;
   margin: 0 auto;
@@ -677,7 +695,7 @@ form.bp form.inline p {
   height: 20px;
   font-size: 10px;
 }
-/* line 70, ../../app/stylesheets/screen.scss */
+/* line 78, ../../app/stylesheets/screen.scss */
 #footer #navigation {
   display: inline;
   float: left;
@@ -685,7 +703,7 @@ form.bp form.inline p {
   margin: 0 -880px 1.5em 880px;
 }
 
-/* line 74, ../../app/stylesheets/screen.scss */
+/* line 82, ../../app/stylesheets/screen.scss */
 #statuses {
   width: 950px;
   margin: 0 auto;
@@ -701,24 +719,24 @@ form.bp form.inline p {
 * html #statuses {
   overflow-x: hidden;
 }
-/* line 78, ../../app/stylesheets/screen.scss */
+/* line 86, ../../app/stylesheets/screen.scss */
 #statuses a {
   text-decoration: none;
 }
 
-/* line 83, ../../app/stylesheets/screen.scss */
+/* line 91, ../../app/stylesheets/screen.scss */
 .rating,
 .calendar-rating {
   height: 60px;
   width: 60px;
 }
 
-/* line 87, ../../app/stylesheets/screen.scss */
+/* line 95, ../../app/stylesheets/screen.scss */
 .rating {
   float: left;
 }
 
-/* line 91, ../../app/stylesheets/screen.scss */
+/* line 99, ../../app/stylesheets/screen.scss */
 .calendar td {
   width: 100px;
   height: 80px;
@@ -726,11 +744,11 @@ form.bp form.inline p {
   vertical-align: top;
   border: solid 1px #454545;
 }
-/* line 96, ../../app/stylesheets/screen.scss */
+/* line 104, ../../app/stylesheets/screen.scss */
 .calendar td .today {
   background-color: #234780;
 }
-/* line 99, ../../app/stylesheets/screen.scss */
+/* line 107, ../../app/stylesheets/screen.scss */
 .calendar td .future {
   background-color: #454545;
 }
@@ -787,7 +805,7 @@ form.bp form.inline p {
   background-position: 0 -540px;
 }
 
-/* line 107, ../../app/stylesheets/screen.scss */
+/* line 115, ../../app/stylesheets/screen.scss */
 #rating-picklist {
   width: 950px;
   margin: 0 auto;
@@ -805,7 +823,7 @@ form.bp form.inline p {
 * html #rating-picklist {
   overflow-x: hidden;
 }
-/* line 113, ../../app/stylesheets/screen.scss */
+/* line 121, ../../app/stylesheets/screen.scss */
 #rating-picklist li a {
   display: block;
   padding-top: 55px;

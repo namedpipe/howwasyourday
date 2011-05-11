@@ -1,4 +1,5 @@
 <% if flash %>
+<%= link_to_function "X", "hyd.close_announcements()", :id => "announcements-close", :title => "Close this announcement" %>
 	<% [:error, :warning, :info, :notice].each do |type| %>
 		<% if flash[type] %>
 			<%= content_tag(:p, h(flash[type]), :id => "flash-message", :class => type.to_s) %>
