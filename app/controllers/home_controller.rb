@@ -5,10 +5,11 @@ class HomeController < ApplicationController
 
 	def index
 		@user = current_user
+		@num_days = 28
 		if @user
 			@user_statuses = @user.statuses
 			@date_range = []
-			(1..7).each do |days_back|
+			(1..@num_days).each do |days_back|
 				date_to_look_at = days_back.days.ago.to_date
 				found_match = false
 				@user_statuses.each do |user_status|
@@ -20,7 +21,6 @@ class HomeController < ApplicationController
 				@date_range.push([days_back.days.ago.to_date, "blank"]) unless found_match
 			end
 		end
-		flash[:notice] = "You've got a nice streak going!"
 		redirect_to :action => "public" if current_user.nil?
 	end
 

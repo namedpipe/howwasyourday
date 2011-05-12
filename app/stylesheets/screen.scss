@@ -81,8 +81,8 @@ form.bp {
 }
 #statuses {
 	@include container;
-	@include column(20,true);
-	@include append(4);
+	@include column(22,true);
+	@include append(2);
 	a {
 		text-decoration: none;
 	}

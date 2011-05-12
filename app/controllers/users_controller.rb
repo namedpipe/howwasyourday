@@ -45,7 +45,8 @@ class UsersController < Clearance::UsersController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to(@user, :notice => 'User was successfully created.') }
+	      sign_in(@user)
+        format.html { redirect_to("/", :notice => 'Welcome!') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }

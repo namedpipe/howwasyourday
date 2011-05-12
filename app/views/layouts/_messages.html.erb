@@ -1,4 +1,4 @@
-<% if flash %>
+<% if flash && !flash.empty? %>
 <%= link_to_function "X", "hyd.close_announcements()", :id => "announcements-close", :title => "Close this announcement" %>
 	<% [:error, :warning, :info, :notice].each do |type| %>
 		<% if flash[type] %>
