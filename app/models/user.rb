@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
 	validates_uniqueness_of :email
 	validates_presence_of :email
 	validates_presence_of :name
+	before_save   :initialize_salt, :encrypt_password
+	before_create :generate_remember_token
 	
 	def status_logged_for_today?(date=Time.now.to_date)
 		statuses.find(:first, :conditions => ["on_date = ?", date]) > 0

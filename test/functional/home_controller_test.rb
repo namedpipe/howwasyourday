@@ -7,6 +7,7 @@ class HomeControllerTest < ActionController::TestCase
   end
 
   test "should get index" do
+		current_user = User.find :first
     get :index
     assert_response :success
   end
