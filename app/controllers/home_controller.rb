@@ -5,14 +5,14 @@ class HomeController < ApplicationController
 
 	def index
 		@user = current_user
-		earliest = @user.statuses.minimum("for_date")
-		days_since_start = (Time.now.to_date - earliest).to_i + 1
-		if days_since_start > 28
-			@num_days = 28
-		else
-			@num_days = days_since_start
-		end
 		if @user
+			earliest = @user.statuses.minimum("for_date")
+			days_since_start = (Time.now.to_date - earliest).to_i + 1
+			if days_since_start > 28
+				@num_days = 28
+			else
+				@num_days = days_since_start
+			end
 			@user_statuses = @user.statuses
 			@date_range = []
 			(1..@num_days).each do |days_back|

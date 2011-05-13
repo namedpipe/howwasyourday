@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  name: MyString
-  email: MyString
+  name: Two
+  email: test@namedpipe.net
 
 two:
-  name: MyString
-  email: MyString
+  name: Two
+  email: two@namedpipe.net

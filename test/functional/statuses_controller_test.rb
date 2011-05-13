@@ -3,6 +3,7 @@ require 'test_helper'
 class StatusesControllerTest < ActionController::TestCase
   setup do
     @status = statuses(:one)
+		current_user = User.find 1
   end
 
   test "should get index" do
