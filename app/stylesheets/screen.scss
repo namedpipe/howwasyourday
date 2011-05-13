@@ -127,3 +127,18 @@ form.bp {
 	}
 	@include last;
 }
+
+#public-home {
+	h1 {
+		font-size: 5.1em;
+		font-weight: bold;
+	}
+	.step {
+		height: 200px;
+		@include container;
+		@include column(6);
+		p.desc {
+			
+		}
+	}
+}

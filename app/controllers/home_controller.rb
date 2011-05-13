@@ -10,8 +10,10 @@ class HomeController < ApplicationController
 			if earliest
 				days_since_start = (Time.now.to_date - earliest).to_i + 1
 			end
-					
-			if (days_since_start > 28) || days_since_start.nil?
+			
+			if days_since_start.nil?
+				@num_days = 5
+			elsif days_since_start > 28
 				@num_days = 28
 			else
 				@num_days = days_since_start

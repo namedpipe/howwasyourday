@@ -46,7 +46,7 @@ class UsersController < Clearance::UsersController
     respond_to do |format|
       if @user.save
 	      sign_in(@user)
-        format.html { redirect_to("/", :notice => 'Welcome!') }
+        format.html { redirect_to("/", :notice => 'Welcome!<br/>Below are the most recent 5 days for you to rate starting with today at the left.<br/>You can get started below by clicking on a circle and setting your rating for that day.') }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
         format.html { render :action => "new" }
