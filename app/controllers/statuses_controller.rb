@@ -5,9 +5,16 @@ class StatusesController < ApplicationController
 	def index
 		@user = current_user
 		if @user
+			earliest = @user.statuses.minimum("for_date")
+			days_since_start = (Time.now.to_date - earliest).to_i + 1
+			if days_since_start > 28
+				@num_days = 28
+			else
+				@num_days = days_since_start
+			end
 			@user_statuses = @user.statuses
 			@date_range = []
-			(1..20).each do |days_back|
+			(1..@num_days).each do |days_back|
 				date_to_look_at = days_back.days.ago.to_date
 				found_match = false
 				@user_statuses.each do |user_status|
