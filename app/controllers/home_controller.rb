@@ -7,8 +7,11 @@ class HomeController < ApplicationController
 		@user = current_user
 		if @user
 			earliest = @user.statuses.minimum("for_date")
-			days_since_start = (Time.now.to_date - earliest).to_i + 1
-			if days_since_start > 28
+			if earliest
+				days_since_start = (Time.now.to_date - earliest).to_i + 1
+			end
+					
+			if (days_since_start > 28) || days_since_start.nil?
 				@num_days = 28
 			else
 				@num_days = days_since_start
