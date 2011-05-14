@@ -8,11 +8,23 @@ class User < ActiveRecord::Base
 	before_create :generate_remember_token
 	
 	def status_logged_for_today?(date=Time.now.to_date)
-		statuses.find(:first, :conditions => ["on_date = ?", date]) > 0
+		statuses.count(:all, :conditions => ["for_date = ?", date]) > 0
 	end
 	
 	def current_good_streak
-		statuses.count
+		if (statuses.count(:all, :conditions => ["for_date = ? AND rating = 'Good'", 1.day.ago.to_date]) > 0)
+			tally = 1
+			statuses.find(:all, :conditions => ["for_date < ? AND rating = 'Good'", 1.day.ago.to_date]).each do |good_status|
+				if good_status.for_date == (1.day.ago.to_date - tally)
+					tally += 1
+				else
+					break
+				end
+			end
+			tally
+		else
+			0
+		end
 	end
 
 	def longest_good_streak
@@ -20,7 +32,8 @@ class User < ActiveRecord::Base
 	end
 	
 	def good_rating_link_for(date=Time.now.to_date)
-		""
+		# salt date 
+		"/rating/"
 	end
 
 	def mixed_rating_link_for(date=Time.now.to_date)
@@ -29,6 +42,13 @@ class User < ActiveRecord::Base
 
 	def bad_rating_link_for(date=Time.now.to_date)
 		""
+	end
+	
+	def message_after_login_or_fresh_visit
+		message = ""
+		message << "You haven't rated yesterday yet. You should do that now." unless status_logged_for_today?(1.day.ago.to_date)
+		message << "You've got a nice streak of <strong>#{current_good_streak}</strong> good days going. Good job!" if (current_good_streak > 3)
+		message
 	end
 
 end

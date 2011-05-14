@@ -1,15 +1,15 @@
 class Reminders < ActionMailer::Base
-  default :from => "from@example.com"
+  default :from => "reminders@howwasyourday.namedpipe.net"
 
   # Subject can be set in your I18n file at config/locales/en.yml
   # with the following lookup:
   #
   #   en.reminders.daily.subject
   #
-  def daily
+  def daily(user, for_date)
     @greeting = "Hi"
 
-    mail :to => "to@example.org"
+    mail :to => user.email
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -17,9 +17,9 @@ class Reminders < ActionMailer::Base
   #
   #   en.reminders.weekly.subject
   #
-  def weekly
+  def weekly(user, for_date)
     @greeting = "Hi"
 
-    mail :to => "to@example.org"
+    mail :to => user.email
   end
 end
