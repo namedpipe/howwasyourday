@@ -4,9 +4,9 @@ How was your day yesterday?
 
 You didn't rate your day for <%= @missing_date %>. Why don't you go ahead and do that now? The links below let you directly rate your day.
 
-Happy - <%= @user.good_rating_link_for(@missing_date) %> 
-Mixed - <%= @user.mixed_rating_link_for(@missing_date) %> 
-Bad - <%= @user.bad_rating_link_for(@missing_date) %> 
+Happy - http://<%= HOST %><%= @user.good_rating_link_for(@missing_date) %> 
+Mixed - http://<%= HOST %><%= @user.mixed_rating_link_for(@missing_date) %> 
+Bad - http://<%= HOST %><%= @user.bad_rating_link_for(@missing_date) %> 
 
 Thanks for using "How was your day?"!
 

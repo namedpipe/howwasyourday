@@ -33,18 +33,25 @@ class User < ActiveRecord::Base
 	end
 	
 	def good_rating_link_for(date=Time.now.to_date)
-		good_link = rating_links.create(:for_date => date, :rating => "Good")
-		"/rate/#{good_link.link_hash}"
+		rating_link_for date, "Good"
 	end
 
 	def mixed_rating_link_for(date=Time.now.to_date)
-		mixed_link = rating_links.create(:for_date => date, :rating => "Mixed")
-		"/rate/#{mixed_link.link_hash}"
+		rating_link_for date, "Mixed"
 	end
 
 	def bad_rating_link_for(date=Time.now.to_date)
-		bad_link = rating_links.create(:for_date => date, :rating => "Bad")
-		"/rate/#{bad_link.link_hash}"
+		rating_link_for date, "Bad"
+	end
+	
+	def rating_link_for(date, rating_type)
+		existing_link = rating_links.find(:first, :conditions => ["rating = ? AND for_date = ?", rating_type, date])
+		if existing_link
+			rating_link = existing_link
+		else
+			rating_link = rating_links.create(:for_date => date, :rating => rating_type)
+		end
+		"/rate/#{rating_link.link_hash}"
 	end
 	
 	def message_after_login_or_fresh_visit

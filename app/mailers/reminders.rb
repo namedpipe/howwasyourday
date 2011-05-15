@@ -1,5 +1,5 @@
 class Reminders < ActionMailer::Base
-	default_url_options[:host] = "howwasyourday.namedpipe.net"
+	default_url_options[:host] = HOST
   default :from => "reminders@howwasyourday.namedpipe.net"
 
   # Subject can be set in your I18n file at config/locales/en.yml

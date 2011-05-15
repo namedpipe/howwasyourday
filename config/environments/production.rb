@@ -36,6 +36,19 @@ HowWasYourDay::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
+	HOST = "howwasyourday.namedpipe.net"
+	# Disable delivery errors, bad email addresses will be ignored
+	# config.action_mailer.raise_delivery_errors = false
+	# set delivery method to :smtp, :sendmail or :test
+	config.action_mailer.delivery_method = :smtp
+
+	# these options are only needed if you choose smtp delivery
+	config.action_mailer.smtp_settings = {
+	  :address        => 'devrandom.namedpipe.net',
+	  :port           => 25,
+	  :domain         => 'devrandom.namedpipe.net',
+	  :authentication => :plain
+	  }
 
   # Enable threaded mode
   # config.threadsafe!
