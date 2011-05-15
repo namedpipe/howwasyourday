@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	include Clearance::User
 	has_many :statuses, :order => "for_date DESC"
+	has_many :rating_links
 	validates_uniqueness_of :email
 	validates_presence_of :email
 	validates_presence_of :name
@@ -32,16 +33,18 @@ class User < ActiveRecord::Base
 	end
 	
 	def good_rating_link_for(date=Time.now.to_date)
-		# salt date 
-		"/rating/"
+		good_link = rating_links.create(:for_date => date, :rating => "Good")
+		"/rate/#{good_link.link_hash}"
 	end
 
 	def mixed_rating_link_for(date=Time.now.to_date)
-		""
+		mixed_link = rating_links.create(:for_date => date, :rating => "Mixed")
+		"/rate/#{mixed_link.link_hash}"
 	end
 
 	def bad_rating_link_for(date=Time.now.to_date)
-		""
+		bad_link = rating_links.create(:for_date => date, :rating => "Bad")
+		"/rate/#{bad_link.link_hash}"
 	end
 	
 	def message_after_login_or_fresh_visit

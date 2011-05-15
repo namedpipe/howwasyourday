@@ -1,0 +1,16 @@
+<p>Hi <%= @user.name %>,</p>
+
+<p>How was your day yesterday?</p>
+
+<p>You didn't rate your day for <%= @missing_date %>. Why don't you go ahead and do that now? The links below let you directly rate your day.</p>
+
+<p><%= link_to "Good", @user.good_rating_link_for(@missing_date) %> <br/>
+<%= link_to "Mixed", @user.mixed_rating_link_for(@missing_date) %> <br/>
+<%= link_to "Bad", @user.bad_rating_link_for(@missing_date) %> <br/>
+</p>
+
+<p>Thanks for using "How was your day?"!</p>
+
+<p>Sincerely,
+
+Someone Who Cares</p>

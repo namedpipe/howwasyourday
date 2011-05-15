@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110510143618) do
+ActiveRecord::Schema.define(:version => 20110514202125) do
+
+  create_table "rating_links", :force => true do |t|
+    t.string   "link_hash"
+    t.integer  "user_id"
+    t.date     "for_date"
+    t.string   "rating"
+    t.boolean  "used",       :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "statuses", :force => true do |t|
     t.integer  "user_id"
@@ -26,10 +36,12 @@ ActiveRecord::Schema.define(:version => 20110510143618) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "encrypted_password", :limit => 128
-    t.string   "salt",               :limit => 128
-    t.string   "confirmation_token", :limit => 128
-    t.string   "remember_token",     :limit => 128
+    t.string   "encrypted_password",  :limit => 128
+    t.string   "salt",                :limit => 128
+    t.string   "confirmation_token",  :limit => 128
+    t.string   "remember_token",      :limit => 128
+    t.datetime "last_visit"
+    t.integer  "longest_good_streak"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

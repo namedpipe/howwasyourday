@@ -85,7 +85,7 @@ class StatusesController < ApplicationController
 
 		respond_to do |format|
 			if @user_status.save
-				format.html { redirect_to(user_statuses_path, :notice => 'Status was successfully created.') }
+				format.html { redirect_to(home_index_path, :notice => 'Status was successfully created.') }
 				format.xml	{ render :xml => @user_status, :status => :created, :location => @user_status }
 			else
 				format.html { render :action => "new" }
@@ -103,7 +103,7 @@ class StatusesController < ApplicationController
 
 		respond_to do |format|
 			if @user_status.update_attributes(params[:status])
-				format.html { redirect_to(@user_status, :notice => 'Status was successfully updated.') }
+				format.html { redirect_to(home_index_path, :notice => 'Status was successfully updated.') }
 				format.xml	{ head :ok }
 			else
 				format.html { render :action => "edit" }
@@ -121,7 +121,7 @@ class StatusesController < ApplicationController
 		end
 
 		respond_to do |format|
-			format.html { redirect_to(user_statuses_url) }
+			format.html { redirect_to(home_index_path) }
 			format.xml	{ head :ok }
 		end
 	end

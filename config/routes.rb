@@ -1,5 +1,5 @@
 HowWasYourDay::Application.routes.draw do
-  get "rating/rate"
+	match 'rate/:id' => 'rating#rate'
 
 	resources :users do
 		resources :statuses do

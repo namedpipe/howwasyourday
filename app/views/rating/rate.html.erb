@@ -1,2 +1,11 @@
-<h1>Rating#rate</h1>
-<p>Find me in app/views/rating/rate.html.erb</p>
+<% if @rating %>
+	<div id="statuses">
+		<h2><%= date_format @rating.for_date %></h2>
+		<div class="rating smileys-smiley_<%= @rating.rating.downcase %>" title="<%= @rating.display_status %>">
+			&nbsp;
+		</div>
+		<br/>
+		<div class="actions">
+		</div>
+	</div>
+<% end %>

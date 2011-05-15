@@ -1,27 +1,19 @@
 /*
-Syntax error: Invalid CSS after "	}": expected "}", was ""
-        on line 55 of /Users/mgorski/Source/hwyd/howwasyourday/app/stylesheets/iphone.scss
+Syntax error: Invalid CSS after "}": expected "}", was ""
+        on line 56 of /Users/mgorski/Source/hwyd/howwasyourday/app/stylesheets/iphone.scss
 
-50: 			.home-panel {
 51: 				display: block;
 52: 			}
 53: 		}
 54: 	}
+55: }
 
 Backtrace:
-/Users/mgorski/Source/hwyd/howwasyourday/app/stylesheets/iphone.scss:55
+/Users/mgorski/Source/hwyd/howwasyourday/app/stylesheets/iphone.scss:56
 /Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:898:in `expected'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:841:in `expected'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:836:in `tok!'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:362:in `block'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:355:in `ruleset'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:417:in `declaration_or_ruleset'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:872:in `call'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:872:in `rethrow'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:418:in `declaration_or_ruleset'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:380:in `block_child'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:372:in `block_contents'
-/Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:361:in `block'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:355:in `ruleset'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:379:in `block_child'
 /Library/Ruby/Gems/1.8/gems/sass-3.1.1/lib/sass/../sass/scss/parser.rb:372:in `block_contents'
@@ -94,4 +86,4 @@ script/rails:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"	}\": expected \"}\", was \"\"\A         on line 55 of /Users/mgorski/Source/hwyd/howwasyourday/app/stylesheets/iphone.scss\A \A 50: 			.home-panel {\A 51: 				display: block;\A 52: 			}\A 53: 		}\A 54: 	}"; }
+  content: "Syntax error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 56 of /Users/mgorski/Source/hwyd/howwasyourday/app/stylesheets/iphone.scss\A \A 51: 				display: block;\A 52: 			}\A 53: 		}\A 54: 	}\A 55: }"; }
