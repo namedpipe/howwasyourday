@@ -1,3 +1,7 @@
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+@import "blueprint";
+
 body {
 	background-color: #ddd;
 	color: #222;
@@ -6,7 +10,15 @@ body {
 	margin: 0;             /* Amount of negative space around the outside of the body */
 	padding: 0;             /* Amount of negative space around the inside of the body */
 }
+#container {
+}
 #header {
+	#login-section {
+		font-size: 12px;
+		font-weight: bold;
+		padding: 10px 0;
+		text-align: center;
+	}
 	#masthead {
 		h1 {
 			margin: 0;
@@ -22,6 +34,9 @@ body {
 				text-align: center;
 				text-decoration: none;
 			}
+		}
+		p {
+			display:none;
 		}
 		ul {
 			list-style: none;
@@ -53,4 +68,25 @@ body {
 			}
 		}
 	}
+}
+
+@import "smileys/*.png";
+@include all-smileys-sprites;
+
+#footer {
+	display: none;
+}
+#statuses {
+	a {
+		text-decoration: none;
+	}
+	@include last;
+}
+.rating,
+.calendar-rating {
+	height: 60px;
+	width: 60px;
+}
+.rating {
+	float: left;
 }

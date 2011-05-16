@@ -1,4 +1,4 @@
-/* line 1, ../../app/stylesheets/iphone.scss */
+/* line 5, ../../app/stylesheets/iphone.scss */
 body {
   background-color: #ddd;
   color: #222;
@@ -10,12 +10,19 @@ body {
   /* Amount of negative space around the inside of the body */
 }
 
-/* line 11, ../../app/stylesheets/iphone.scss */
+/* line 16, ../../app/stylesheets/iphone.scss */
+#header #login-section {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+}
+/* line 23, ../../app/stylesheets/iphone.scss */
 #header #masthead h1 {
   margin: 0;
   padding: 0;
 }
-/* line 14, ../../app/stylesheets/iphone.scss */
+/* line 26, ../../app/stylesheets/iphone.scss */
 #header #masthead h1 a {
   background-color: #ccc;
   border-bottom: 1px solid #666;
@@ -27,13 +34,17 @@ body {
   text-align: center;
   text-decoration: none;
 }
-/* line 26, ../../app/stylesheets/iphone.scss */
+/* line 38, ../../app/stylesheets/iphone.scss */
+#header #masthead p {
+  display: none;
+}
+/* line 41, ../../app/stylesheets/iphone.scss */
 #header #masthead ul {
   list-style: none;
   margin: 10px;
   padding: 0;
 }
-/* line 31, ../../app/stylesheets/iphone.scss */
+/* line 46, ../../app/stylesheets/iphone.scss */
 #header #masthead ul li a {
   background-color: #FFFFFF;
   border: 1px solid #999999;
@@ -46,11 +57,89 @@ body {
   text-decoration: none;
 }
 
-/* line 47, ../../app/stylesheets/iphone.scss */
+/* line 62, ../../app/stylesheets/iphone.scss */
 #content {
   padding: 10px;
 }
-/* line 51, ../../app/stylesheets/iphone.scss */
+/* line 66, ../../app/stylesheets/iphone.scss */
 #content #home #welcome .home-panel {
   display: block;
+}
+
+/* line 79, smileys */
+.smileys-sprite, .smileys-smiley_bad, .smileys-smiley_bad_unselected, .smileys-smiley_blank, .smileys-smiley_good, .smileys-smiley_good_unselected, .smileys-smiley_mixed, .smileys-smiley_mixed_unselected {
+  background: url('/images/smileys-9047005292.png') no-repeat;
+}
+
+/* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_bad {
+  background-position: 0 0;
+}
+
+/* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_bad_unselected {
+  background-position: 0 -60px;
+}
+/* line 42, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_bad_unselected:hover, .smileys-smiley_bad_unselected.smiley_bad_unselected_hover, .smileys-smiley_bad_unselected.smiley_bad_unselected-hover {
+  background-position: 0 -120px;
+}
+
+/* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_blank {
+  background-position: 0 -180px;
+}
+
+/* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_good {
+  background-position: 0 -240px;
+}
+
+/* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_good_unselected {
+  background-position: 0 -300px;
+}
+/* line 42, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_good_unselected:hover, .smileys-smiley_good_unselected.smiley_good_unselected_hover, .smileys-smiley_good_unselected.smiley_good_unselected-hover {
+  background-position: 0 -360px;
+}
+
+/* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_mixed {
+  background-position: 0 -420px;
+}
+
+/* line 59, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_mixed_unselected {
+  background-position: 0 -480px;
+}
+/* line 42, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/compass/stylesheets/compass/utilities/sprites/_base.scss */
+.smileys-smiley_mixed_unselected:hover, .smileys-smiley_mixed_unselected.smiley_mixed_unselected_hover, .smileys-smiley_mixed_unselected.smiley_mixed_unselected-hover {
+  background-position: 0 -540px;
+}
+
+/* line 76, ../../app/stylesheets/iphone.scss */
+#footer {
+  display: none;
+}
+
+/* line 79, ../../app/stylesheets/iphone.scss */
+#statuses {
+  margin-right: 0;
+}
+/* line 80, ../../app/stylesheets/iphone.scss */
+#statuses a {
+  text-decoration: none;
+}
+
+/* line 86, ../../app/stylesheets/iphone.scss */
+.rating,
+.calendar-rating {
+  height: 60px;
+  width: 60px;
+}
+
+/* line 90, ../../app/stylesheets/iphone.scss */
+.rating {
+  float: left;
 }
