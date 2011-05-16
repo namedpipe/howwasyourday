@@ -36,7 +36,7 @@ HowWasYourDay::Application.configure do
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
-	HOST = "howwasyourday.namedpipe.net"
+	config.host_for_emails = "howwasyourday.namedpipe.net"
 	# Disable delivery errors, bad email addresses will be ignored
 	# config.action_mailer.raise_delivery_errors = false
 	# set delivery method to :smtp, :sendmail or :test
