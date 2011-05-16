@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class User < ActiveRecord::Base
 	include Clearance::User
 	has_many :statuses, :order => "for_date DESC"
