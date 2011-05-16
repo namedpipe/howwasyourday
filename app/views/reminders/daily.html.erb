@@ -10,10 +10,14 @@
 
 		<p>You didn't rate your day for <%= @missing_date %>. Why don't you go ahead and do that now? The links below let you directly rate your day.</p>
 
-		<p><%= link_to(raw("<img src='http://#{HowWasYourDay::Application.config.host_for_emails}/images/smileys/smiley_good.png' /><br/>Good"), "http://" + HowWasYourDay::Application.config.host_for_emails + @user.good_rating_link_for(@missing_date)) %> <br/>
-			<%= link_to(raw("<img src='http://#{HowWasYourDay::Application.config.host_for_emails}/images/smileys/smiley_mixed.png' /><br/>Mixed"), "http://" + HowWasYourDay::Application.config.host_for_emails + @user.mixed_rating_link_for(@missing_date)) %><br/>
-			<%= link_to(raw("<img src='http://#{HowWasYourDay::Application.config.host_for_emails}/images/smileys/smiley_bad.png' /><br/>Bad"), "http://" + HowWasYourDay::Application.config.host_for_emails + @user.bad_rating_link_for(@missing_date)) %>
-		</p>
+		<table border="0" width="300" cellpadding="5">
+		<tr>
+			<td><%= link_to(raw("<img src='http://#{HowWasYourDay::Application.config.host_for_emails}/images/smileys/smiley_good.png' /><br/>Good"), "http://" + HowWasYourDay::Application.config.host_for_emails + @user.good_rating_link_for(@missing_date)) %></td>
+			<td><%= link_to(raw("<img src='http://#{HowWasYourDay::Application.config.host_for_emails}/images/smileys/smiley_mixed.png' /><br/>Mixed"), "http://" + HowWasYourDay::Application.config.host_for_emails + @user.mixed_rating_link_for(@missing_date)) %></td>
+			<td><%= link_to(raw("<img src='http://#{HowWasYourDay::Application.config.host_for_emails}/images/smileys/smiley_bad.png' /><br/>Bad"), "http://" + HowWasYourDay::Application.config.host_for_emails + @user.bad_rating_link_for(@missing_date)) %>
+			</td>
+		</tr>
+		</table>
 
 		<p>Thanks for using "How was your day?"!</p>
 
