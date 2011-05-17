@@ -10,7 +10,7 @@ class Reminders < ActionMailer::Base
   def daily(user, for_date)
 		@user = user
 		@missing_date = for_date
-		mail :to => user.email, :subject => "Reminder - How was #{for_date}?"
+		mail :to => user.email, :subject => "Reminder - How was #{for_date.strftime('%A, %B %d')}?"
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
