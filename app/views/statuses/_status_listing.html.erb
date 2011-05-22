@@ -2,10 +2,18 @@
 	<% @date_range.each do |date_rating| %>
 		<% if date_rating.last == "blank" %>
 			<a href="<%= new_user_status_path(current_user) %>?date=<%= date_rating.first %>">
-		<div class="rating smileys-smiley_<%= date_rating.last.downcase %>" title="">&nbsp;</div></a>
+		<div class="rating smileys-smiley_<%= date_rating.last.downcase %>" title=""><span class="rating-name"><%= date_rating.last %></span></div>
+		<% if @date_range.first == date_rating %>
+		<div id="starting-date"><%= @date_range.first.first.strftime('%A') %></div>
+		<% end %>
+		<% if @date_range.last == date_rating %>
+		<div id="ending-date"><%= @date_range.last.first.strftime('%A') %><br/>
+			<%= @date_range.last.first.strftime('%B %d') %></div>
+		<% end %>
+		</a>
 		<% else %>
 			<a href="<%= user_status_path(current_user, date_rating.last) %>">
-<div class="rating smileys-smiley_<%= date_rating.last.rating.downcase %>" title="<%= date_rating.last.display_status %>">&nbsp;</div></a>
+<div class="rating smileys-smiley_<%= date_rating.last.rating.downcase %>" title="<%= date_rating.last.display_status %>"><%= date_rating.last %></div></a>
 		<% end %>
 	<% end %>
 </div>

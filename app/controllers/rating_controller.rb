@@ -3,6 +3,8 @@ class RatingController < ApplicationController
 		link = RatingLink.find_by_link_hash params[:id]
 		if link
 			@rating = link.user.statuses.create(:for_date => link.for_date, :rating => link.rating)
+			link.used = true
+			link.save
 		end
 		redirect_to(home_index_path, :notice => 'Status was successfully created.')
   end

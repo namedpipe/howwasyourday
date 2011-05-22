@@ -722,21 +722,26 @@ form.bp form.inline p {
 /* line 86, ../../app/stylesheets/screen.scss */
 #statuses a {
   text-decoration: none;
+  height: 100px;
+  float: left;
+}
+/* line 90, ../../app/stylesheets/screen.scss */
+#statuses a .rating-name {
+  display: none;
+}
+/* line 94, ../../app/stylesheets/screen.scss */
+#statuses #starting-date, #statuses #ending-date {
+  padding-left: 8px;
 }
 
-/* line 91, ../../app/stylesheets/screen.scss */
+/* line 99, ../../app/stylesheets/screen.scss */
 .rating,
 .calendar-rating {
   height: 60px;
   width: 60px;
 }
 
-/* line 95, ../../app/stylesheets/screen.scss */
-.rating {
-  float: left;
-}
-
-/* line 99, ../../app/stylesheets/screen.scss */
+/* line 105, ../../app/stylesheets/screen.scss */
 .calendar td {
   width: 100px;
   height: 80px;
@@ -744,11 +749,11 @@ form.bp form.inline p {
   vertical-align: top;
   border: solid 1px #454545;
 }
-/* line 104, ../../app/stylesheets/screen.scss */
+/* line 110, ../../app/stylesheets/screen.scss */
 .calendar td .today {
   background-color: #234780;
 }
-/* line 107, ../../app/stylesheets/screen.scss */
+/* line 113, ../../app/stylesheets/screen.scss */
 .calendar td .future {
   background-color: #454545;
 }
@@ -805,7 +810,7 @@ form.bp form.inline p {
   background-position: 0 -540px;
 }
 
-/* line 115, ../../app/stylesheets/screen.scss */
+/* line 121, ../../app/stylesheets/screen.scss */
 #rating-picklist {
   width: 950px;
   margin: 0 auto;
@@ -823,7 +828,7 @@ form.bp form.inline p {
 * html #rating-picklist {
   overflow-x: hidden;
 }
-/* line 121, ../../app/stylesheets/screen.scss */
+/* line 127, ../../app/stylesheets/screen.scss */
 #rating-picklist li a {
   display: block;
   padding-top: 55px;
@@ -831,12 +836,12 @@ form.bp form.inline p {
   text-decoration: none;
 }
 
-/* line 132, ../../app/stylesheets/screen.scss */
+/* line 138, ../../app/stylesheets/screen.scss */
 #public-home h1 {
   font-size: 5.1em;
   font-weight: bold;
 }
-/* line 136, ../../app/stylesheets/screen.scss */
+/* line 142, ../../app/stylesheets/screen.scss */
 #public-home .step {
   height: 200px;
   width: 950px;
