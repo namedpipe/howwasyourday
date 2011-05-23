@@ -13,7 +13,7 @@
 		</a>
 		<% else %>
 			<a href="<%= user_status_path(current_user, date_rating.last) %>">
-<div class="rating smileys-smiley_<%= date_rating.last.rating.downcase %>" title="<%= date_rating.last.display_status %>"><%= date_rating.last %></div></a>
+<div class="rating smileys-smiley_<%= date_rating.last.rating.downcase %>" title="<%= date_rating.last.display_status %>"><span class="rating-name"><%= date_rating.last.rating %></span></div></a>
 		<% end %>
 	<% end %>
 </div>

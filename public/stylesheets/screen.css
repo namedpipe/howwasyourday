@@ -828,7 +828,11 @@ form.bp form.inline p {
 * html #rating-picklist {
   overflow-x: hidden;
 }
-/* line 127, ../../app/stylesheets/screen.scss */
+/* line 126, ../../app/stylesheets/screen.scss */
+#rating-picklist li {
+  float: left;
+}
+/* line 128, ../../app/stylesheets/screen.scss */
 #rating-picklist li a {
   display: block;
   padding-top: 55px;
@@ -836,12 +840,12 @@ form.bp form.inline p {
   text-decoration: none;
 }
 
-/* line 138, ../../app/stylesheets/screen.scss */
+/* line 139, ../../app/stylesheets/screen.scss */
 #public-home h1 {
   font-size: 5.1em;
   font-weight: bold;
 }
-/* line 142, ../../app/stylesheets/screen.scss */
+/* line 143, ../../app/stylesheets/screen.scss */
 #public-home .step {
   height: 200px;
   width: 950px;
