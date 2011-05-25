@@ -2,16 +2,20 @@
 	<h1>Wow! Keep it up.</h1>
 	<div id="first" class="step">
 		<h2>Track Your Daily Status</h2>
+		<%= image_tag "step_1.png"%>
 		<p class="desc">Enter in your mood, feeling about your health, relationship status, or anything really that fits into the categories of "Good", "Mixed", "Bad" each day</p>
 	</div>
 
 	<div id="second" class="step">
 		<h2>Get Reminded Daily</h2>
+		<%= image_tag "step_2.png" %>
 		<p class="desc">If you forget to rate your day, we'll send you a reminder.</p>
 	</div>
 
 	<div id="third" class="step">
-		<h2>Identify Patterns and Streaks</h2>
+		<h2>See Patterns</h2>
+		<%= image_tag "step_3.png" %>
 		<p class="desc">You'll see streaks in your daily status - keep them going. You can see patterns depending on the time of the month or what you write in the comments.</p>
 	</div>
+	<%= link_to "Sign Up!", "/sign_up", :class => "btn" %>
 </div>

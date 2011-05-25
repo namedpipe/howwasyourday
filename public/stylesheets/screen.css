@@ -688,7 +688,7 @@ form.bp form.inline p {
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  margin-top: 100px;
+  margin-top: 0px;
   padding-top: 4px;
   border-top: dotted 1px #52f65c;
   border-bottom: dotted 1px #52f65c;
@@ -841,13 +841,39 @@ form.bp form.inline p {
 }
 
 /* line 139, ../../app/stylesheets/screen.scss */
+form .actions {
+  padding-top: 15px;
+}
+/* line 142, ../../app/stylesheets/screen.scss */
+form input[type="submit"] {
+  font-size: 2.1em;
+  padding-top: 10px;
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 0 -40px 1.5em 40px;
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
+  border-radius: 4px;
+  padding: 8px 25px 8px 25px;
+  background-color: #401fa7;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* line 157, ../../app/stylesheets/screen.scss */
 #public-home h1 {
   font-size: 5.1em;
   font-weight: bold;
 }
-/* line 143, ../../app/stylesheets/screen.scss */
+/* line 161, ../../app/stylesheets/screen.scss */
+#public-home h2 {
+  border-bottom: 3px solid #f49139;
+}
+/* line 164, ../../app/stylesheets/screen.scss */
 #public-home .step {
-  height: 200px;
+  height: 400px;
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
@@ -855,9 +881,35 @@ form.bp form.inline p {
   display: inline;
   float: left;
   margin-right: 10px;
-  width: 230px;
+  width: 270px;
 }
 /* line 147, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.1/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html #public-home .step {
   overflow-x: hidden;
+}
+/* line 168, ../../app/stylesheets/screen.scss */
+#public-home .step img {
+  height: 200px;
+}
+/* line 169, ../../app/stylesheets/screen.scss */
+#public-home .step p.desc {
+  padding: 10px;
+  background-color: #c5c5c5;
+}
+/* line 174, ../../app/stylesheets/screen.scss */
+#public-home a.btn {
+  font-size: 3.1em;
+  margin-bottom: 0;
+  display: inline;
+  float: left;
+  position: relative;
+  margin: 0 -640px 1.5em 640px;
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000;
+  box-shadow: 3px 3px 4px #000;
+  border-radius: 4px;
+  padding: 8px 25px 8px 25px;
+  background-color: #401fa7;
+  text-decoration: none;
+  color: #fff;
 }

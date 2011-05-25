@@ -69,7 +69,7 @@ form.bp {
 
 #footer {
 	@include container;
-	margin-top: 100px;
+	margin-top: 0px;
 	padding-top: 4px;
 	border-top: dotted 1px $green_link_hover_color;
 	border-bottom: dotted 1px $green_link_hover_color;
@@ -135,17 +135,53 @@ form.bp {
 	@include last;
 }
 
+form {
+	.actions {
+		padding-top: 15px;
+	}
+	input[type="submit"] {
+		font-size: 2.1em;
+		padding-top: 10px;
+		@include push(1);
+		-moz-box-shadow: 3px 3px 4px #000;
+		-webkit-box-shadow: 3px 3px 4px #000;
+		box-shadow: 3px 3px 4px #000;
+		border-radius: 4px;
+		padding: 8px 25px 8px 25px;
+		background-color: $link_color;
+		text-decoration: none;
+		color: #fff;
+	}
+}
 #public-home {
 	h1 {
 		font-size: 5.1em;
 		font-weight: bold;
 	}
+	h2 {
+		border-bottom: 3px solid $orange_hover_color;
+	}
 	.step {
-		height: 200px;
+		height: 400px;
 		@include container;
-		@include column(6);
+		@include column(7);
+		img { height: 200px;}
 		p.desc {
-			
+			padding: 10px;
+			background-color: #c5c5c5;
 		}
+	}
+	a.btn {
+		font-size: 3.1em;
+		margin-bottom: 0;
+		@include push(16);
+		-moz-box-shadow: 3px 3px 4px #000;
+		-webkit-box-shadow: 3px 3px 4px #000;
+		box-shadow: 3px 3px 4px #000;
+		border-radius: 4px;
+		padding: 8px 25px 8px 25px;
+		background-color: $link_color;
+		text-decoration: none;
+		color: #fff;
 	}
 }
