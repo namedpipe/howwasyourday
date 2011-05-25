@@ -31,7 +31,10 @@ class HomeController < ApplicationController
 				end
 				@date_range.push([days_back.days.ago.to_date, "blank"]) unless found_match
 			end
-			flash[:notice] = @user.message_after_login_or_fresh_visit unless flash[:notice]
+			fresh_message = @user.message_after_login_or_fresh_visit
+			if fresh_message != "" && flash[:notice].nil?
+				flash[:notice] = fresh_message
+			end
 		end
 		redirect_to :action => "public" if current_user.nil?
 	end
