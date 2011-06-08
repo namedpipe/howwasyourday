@@ -4,8 +4,7 @@
 		&nbsp;
 	</div>
 	<br/>
-	<div class="actions">
-	</div>
+	<h3><%= @user_status.comments %></h3>
 </div>
-<%= link_to 'Delete', user_status_path(current_user, @user_status), :method => :delete%>
+<%= link_to 'Delete', user_status_path(current_user, @user_status), :method => :delete %><br/>
 <%= link_to 'Back', user_statuses_path %>

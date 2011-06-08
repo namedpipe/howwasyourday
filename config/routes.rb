@@ -1,7 +1,7 @@
 HowWasYourDay::Application.routes.draw do
 	match 'rate/:id' => 'rating#rate'
 
-	resources :users do
+	resource :user do
 		resources :statuses do
 			get 'calendar', :on => :collection
 		end

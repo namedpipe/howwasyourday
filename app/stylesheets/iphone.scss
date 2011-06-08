@@ -79,6 +79,11 @@ body {
 #statuses {
 	a {
 		text-decoration: none;
+		height: 100px;
+		float: left;
+		.rating-name {
+			display:none;
+		}
 	}
 	@include last;
 }
