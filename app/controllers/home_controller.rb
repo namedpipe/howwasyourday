@@ -1,6 +1,10 @@
 class HomeController < ApplicationController
 	
 	def public
+		if session[:rating_complete]
+			flash[:notice] = "Your rating of the day was recorded. But you are not logged in on this machine so you cannot see your full view of ratings"
+			session[:rating_complete] = false
+		end
 	end
 
 	def index

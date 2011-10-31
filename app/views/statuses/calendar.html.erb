@@ -1,6 +1,6 @@
-<% calendar_for(@user_statuses, :html => {:class => "calendar"}) do |status| %>
+<%= calendar_for(@user_statuses, :html => {:class => "calendar"}) do |status| %>
 	<%= status.head('mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun') %>
-	<% status.day do |day, statuses| %>
+	<%= status.day do |day, statuses| %>
 		<%= day.day %>
 		<% if statuses.empty?  && day > Time.now.to_date %>
 		&nbsp;

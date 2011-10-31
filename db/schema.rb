@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110514202125) do
+ActiveRecord::Schema.define(:version => 20111008204828) do
 
   create_table "rating_links", :force => true do |t|
     t.string   "link_hash"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20110514202125) do
     t.string   "remember_token",      :limit => 128
     t.datetime "last_visit"
     t.integer  "longest_good_streak"
+    t.boolean  "send_daily_reminder",                :default => true
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"
