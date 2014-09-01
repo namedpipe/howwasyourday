@@ -1,0 +1,12 @@
+production:
+  servers:
+    devrandom:
+      host: devrandom.namedpipe.net
+      directory: /opt/www/yimg/
+      rails_env: PRODUCTION
+
+staging:
+  servers:
+    devrandom:
+      host: devrandom.namedpipe.net
+      directory: /opt/www/yimg_staging/
