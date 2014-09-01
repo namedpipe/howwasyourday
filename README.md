@@ -8,3 +8,4 @@ Currently powers the service at http://howwasyourday.namedpipe.net/
 ![Home screen of How Was Your Day](/screenshot.png?raw=true "Home screen of How Was Your Day")
 
 
+Copyright 2010-2014 Mike Gorski. All rights reserved.
